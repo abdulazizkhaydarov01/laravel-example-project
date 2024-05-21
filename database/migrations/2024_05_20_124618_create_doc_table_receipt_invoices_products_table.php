@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('doc_table_receipt_invoices_products', function (Blueprint $table) {
             $table->id();
-            $table->string('Doc_ReceiptInvoice');
+            $table->string('Doc_ReceiptInvoice_Link');
             $table->string('Ref_Product_Link');
             $table->integer('Quantity');
             $table->integer('Price');

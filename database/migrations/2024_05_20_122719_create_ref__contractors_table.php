@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('ref__contractors', function (Blueprint $table) {
             $table->id();
             $table->string('_Link');
+            $table->string('_Name');
             $table->string('_Code');
-            $table->string('_IsGroup');
-            $table->string('_ParentLink');
-            $table->string('_OwnerLink');
-            $table->string('_IsDeleted');
+            $table->boolean('_IsGroup')->default(false);
+            $table->string('_ParentLink')->nullable();
+            $table->string('_OwnerLink')->nullable();
+            $table->boolean('_IsDeleted')->default(false);
             $table->timestamps();
         });
     }

@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Ref_Products extends Model
 {
     use HasFactory;
+    public $fillable = ['_Name'];
 }

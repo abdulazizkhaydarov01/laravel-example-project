@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('_Link');
             $table->string('_Code');
             $table->string('Ref_Contractor_Link');
-            $table->string('_Date');
-            $table->string('_IsTransacted');
-            $table->string('_IsDeleted');
+            $table->date('_Date');
+            $table->boolean('_IsTransacted')->default(false);
+            $table->boolean('_IsDeleted')->default(false);
             $table->timestamps();
         });
     }

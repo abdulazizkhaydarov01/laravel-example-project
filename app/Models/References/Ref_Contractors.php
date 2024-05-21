@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Ref_Contractors extends Model
 {
     use HasFactory;
+    public $fillable = ['_Name'];
 }
