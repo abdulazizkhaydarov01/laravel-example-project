@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('doc_table_receipt_invoices_products', function (Blueprint $table) {
+        Schema::create('leftovers_of_products', function (Blueprint $table) {
             $table->id();
-            $table->string('Doc_ReceiptInvoice');
+            $table->date('Period');
+            $table->string('Doc_Link');
+            $table->string('TypeOfDoc');
             $table->string('Ref_Product_Link');
             $table->integer('Quantity');
-            $table->integer('Price');
-            $table->integer('Amount');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('doc_table_receipt_invoices_products');
+        Schema::dropIfExists('leftovers_of_products');
     }
 };

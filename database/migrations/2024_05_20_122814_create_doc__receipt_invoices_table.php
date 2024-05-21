@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('_Link');
             $table->string('_Code');
-            $table->string('Ref_Contractor');
+            $table->string('Ref_Contractor_Link');
             $table->string('_Date');
             $table->string('_IsTransacted');
             $table->string('_IsDeleted');
