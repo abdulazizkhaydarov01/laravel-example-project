@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('ref__products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('full_name');
+            $table->string('Name');
+            $table->string('FullName');
             $table->timestamps();
         });
     }
