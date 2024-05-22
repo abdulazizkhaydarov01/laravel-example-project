@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('ref__products', function (Blueprint $table) {
             $table->id();
-            $table->string('_Link');
+            $table->string('_Uuid')->unique();
             $table->string('_Name');
             $table->string('_Code');
             $table->boolean('_IsGroup')->default(false);
-            $table->string('_ParentLink')->nullable();
-            $table->string('_OwnerLink')->nullable();
+            $table->string('_Parent_Uuid')->nullable();
+            $table->string('_Owner_Uuid')->nullable();
             $table->boolean('_IsDeleted')->default(false);
             $table->timestamps();
+
+            $table->index(['_Uuid', '_Name', '_Code']);
         });
     }
 

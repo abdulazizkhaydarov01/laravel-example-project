@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('leftovers_of_products_virtuals', function (Blueprint $table) {
             $table->id();
             $table->date('Period');
-            $table->string('Ref_Product_Link');
+            $table->string('Ref_Product_Uuid');
             $table->integer('Quantity');
             $table->timestamps();
         });

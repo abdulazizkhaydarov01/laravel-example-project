@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('leftovers_of_products', function (Blueprint $table) {
             $table->id();
             $table->date('Period');
-            $table->string('Doc_Link');
+            $table->string('Doc_Uuid');
             $table->string('TypeOfDoc');
-            $table->string('Ref_Product_Link');
+            $table->string('Ref_Product_Uuid');
             $table->integer('Quantity');
             $table->timestamps();
         });

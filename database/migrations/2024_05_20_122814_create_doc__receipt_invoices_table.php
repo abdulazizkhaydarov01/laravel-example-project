@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('doc__receipt_invoices', function (Blueprint $table) {
             $table->id();
-            $table->string('_Link');
+            $table->string('_Uuid')->unique();
             $table->string('_Code');
-            $table->string('Ref_Contractor_Link');
+            $table->string('Ref_Contractor_Uuid');
             $table->date('_Date');
             $table->boolean('_IsTransacted')->default(false);
             $table->boolean('_IsDeleted')->default(false);
             $table->timestamps();
+
+            $table->index(['_Uuid', '_Code']);
         });
     }
 
